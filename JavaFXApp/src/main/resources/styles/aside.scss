@@ -1,0 +1,26 @@
+.menu-button {
+
+    -fx-padding: 10px 15px;
+    -fx-border-radius: 5px;
+    -fx-border-color: none;
+    //-fx-background-color: none;
+}
+
+.menu-button:hover {
+    -fx-background-color: #989797; /* Оранжевый цвет при наведении */
+    //-fx-fill: red;
+    -fx-font-size: 16px;
+    //-fx-text-fill: #FFFFFF;
+}
+
+.logo-container{
+
+    -fx-text-fill: #000000;
+    -fx-font-size: 16px;
+
+}
+
+.menu-grid{
+
+    -fx-padding: 10px 15px;
+}

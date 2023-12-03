@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+
+
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<BorderPane
+            styleClass="main"
+            fx:controller="com.example.controllers.MainScreenController"
+            xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1"
+            stylesheets="/styles/css/main.css"
+    >
+        <center>
+            <VBox  alignment="CENTER">
+                <Label text="Добро пожаловать"/>
+                <Button styleClass="main_card_button" text="Войти как гость" onAction="#guestLogin"/>
+                <Button styleClass="main_card_button" text="Войти в аккаунт" onAction="#login"/>
+            </VBox>
+
+        </center>
+    <bottom>
+        <HBox alignment="CENTER" styleClass="main_bottom_container" >
+
+            <!-- Текстовая метка "Текст1" в левом нижнем углу -->
+            <Label text="Версия 0.0.1" styleClass="text_label"/>
+
+            <!-- Разделитель -->
+            <Region HBox.hgrow="ALWAYS"/>
+
+            <!-- Текстовая метка "Текст2" в правом нижнем углу -->
+            <Label text="Политика конфиденциальности" styleClass="text_label_button" onMouseClicked="#openModal"/>
+
+            <!-- Пустой регион для выравнивания "Текст2" в правом нижнем углу -->
+        </HBox>
+
+    </bottom>
+    </BorderPane>
+
