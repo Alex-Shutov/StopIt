@@ -1,11 +1,14 @@
+C:\Alex\dev\stop_it\JavaFXApp\src\main\java\com\example\interfaces\IBrowser.java
+C:\Alex\dev\stop_it\JavaFXApp\src\main\java\com\example\controllers\MainModalController.java
+C:\Alex\dev\stop_it\JavaFXApp\src\main\java\com\example\services\ScreenClassifierService.java
+C:\Alex\dev\stop_it\JavaFXApp\src\main\java\com\example\utils\ActiveWindowInfo.java
 C:\Alex\dev\stop_it\JavaFXApp\src\main\java\com\example\interfaces\IControlledScreen.java
 C:\Alex\dev\stop_it\JavaFXApp\src\main\java\com\example\controllers\MainScreenController.java
 C:\Alex\dev\stop_it\JavaFXApp\src\main\java\com\example\services\ScreenLoaderService.java
 C:\Alex\dev\stop_it\JavaFXApp\src\main\java\com\example\interfaces\IModalController.java
 C:\Alex\dev\stop_it\JavaFXApp\src\main\java\com\example\services\ScreenOverlayService.java
 C:\Alex\dev\stop_it\JavaFXApp\src\main\java\com\example\services\ScreenCreatorService.java
-C:\Alex\dev\stop_it\JavaFXApp\src\main\java\com\example\controllers\MainModalController.java
 C:\Alex\dev\stop_it\JavaFXApp\src\main\java\com\example\controllers\MenuScreenController.java
+C:\Alex\dev\stop_it\JavaFXApp\src\main\java\com\example\models\browsers\FirefoxBrowser.java
+C:\Alex\dev\stop_it\JavaFXApp\src\main\java\com\example\models\browsers\ChromiumBrowser.java
 C:\Alex\dev\stop_it\JavaFXApp\src\main\java\com\example\App.java
-C:\Alex\dev\stop_it\JavaFXApp\src\main\java\com\example\services\ScreenClassifierService.java
-C:\Alex\dev\stop_it\JavaFXApp\src\main\java\com\example\utils\ActiveWindowInfo.java

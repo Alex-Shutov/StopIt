@@ -37,20 +37,20 @@
             <VBox focusTraversable="true" fx:id="blockButton"   onMousePressed="#onVBoxPressed" styleClass="menu-button">
                 <HBox>
                     <Label>Блокировка</Label>
-                    <ToggleSwitch selected="false" />
-                </HBox>
-            </VBox>
-            <VBox focusTraversable="true"   onMousePressed="#onVBoxPressed" onMouseClicked="#blurScreen" styleClass="menu-button">
-                <HBox>
-                    <Label>Кнопка 2</Label>
-                </HBox>
-            </VBox>
-            <VBox focusTraversable="true"   onMousePressed="#onVBoxPressed"  styleClass="menu-button">
-                <HBox>
-                    <Label>Скриншоты</Label>
                     <ToggleSwitch fx:id="screenshotSwitch" />
                 </HBox>
             </VBox>
+<!--            <VBox focusTraversable="true"   onMousePressed="#onVBoxPressed" onMouseClicked="#blurScreen" styleClass="menu-button">-->
+<!--                <HBox>-->
+<!--                    <Label>Кнопка 2</Label>-->
+<!--                </HBox>-->
+<!--            </VBox>-->
+<!--            <VBox focusTraversable="true"   onMousePressed="#onVBoxPressed"  styleClass="menu-button">-->
+<!--                <HBox>-->
+<!--                    <Label>Скриншоты</Label>-->
+<!--                    <ToggleSwitch />-->
+<!--                </HBox>-->
+<!--            </VBox>-->
             </FlowPane>
 <!--        <VBox spacing="10" GridPane.columnIndex="0" GridPane.rowIndex="3">-->
 <!--            <Button text="Button 1" onAction="#handleButton1" styleClass="button1"/>-->
@@ -75,10 +75,10 @@
     <!-- Остальной контент -->
         <!-- Вставьте сюда свои элементы -->
         <VBox spacing="10" GridPane.columnIndex="40" GridPane.rowIndex="1">
-            <Label text="Дополнительный контент"/>
+<!--            <Label text="Дополнительный контент"/>-->
         </VBox>
         <VBox spacing="10" GridPane.columnIndex="4" GridPane.rowIndex="3">
-            <Label text="Основной контент"/>
+<!--            <Label text="Основной контент"/>-->
         </VBox>
         <!-- Добавьте еще элементов по вашему усмотрению -->
     </GridPane>

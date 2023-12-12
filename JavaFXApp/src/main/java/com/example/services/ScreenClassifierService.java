@@ -1,6 +1,7 @@
 package com.example.services;
 
 import com.example.utils.ActiveWindowInfo;
+import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 
 import java.io.BufferedReader;
@@ -14,7 +15,8 @@ import java.nio.file.StandardCopyOption;
 import java.util.Objects;
 
 public class ScreenClassifierService {
-    static double UNSAFE_CLASSIFICATION_THRESHOLD = 0.01;
+    static double UNSAFE_CLASSIFICATION_THRESHOLD = 0;
+    private static ScreenOverlayService screenOverlay = new ScreenOverlayService();
     public static void runClassificationScript() throws IOException {
 
         String tempDir = System.getProperty("java.io.tmpdir");
@@ -55,7 +57,10 @@ public class ScreenClassifierService {
 
     public static void KillActiveWindow(double classificationResult){
         if (classificationResult > UNSAFE_CLASSIFICATION_THRESHOLD) {
-            System.out.println(ActiveWindowInfo.getActiveWindow());
+            Platform.runLater(() -> {
+                new ActiveWindowInfo().closeActiveWindow();
+                screenOverlay.blurScreen();
+            });
         }
     }
 
