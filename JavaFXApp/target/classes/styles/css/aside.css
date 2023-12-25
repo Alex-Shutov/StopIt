@@ -1,16 +1,84 @@
 .menu-button {
-  -fx-padding: 10px 15px;
-  -fx-border-radius: 5px;
-  -fx-border-color: none; }
+  -fx-background-color: #F5F5F5;
+  -fx-border-style: none;
+  -fx-border-color: none;
+  -fx-min-width: 260px;
+  -fx-padding: 10px 10px 10px 12px; }
+  .menu-button__block {
+    -fx-background-color: #FF4C00; }
+    .menu-button__block label {
+      -fx-text-fill: #FFF; }
+  .menu-button__inner {
+    -fx-padding: 2px 8px 2px 0px; }
+    .menu-button__inner:hover {
+      -fx-background-color: #EAEAEA; }
 
-.menu-button:hover {
-  -fx-background-color: #989797;
-  /* Оранжевый цвет при наведении */
-  -fx-font-size: 16px; }
+.menu-button:focused {
+  outline: none;
+  -fx-focus-traversable: green;
+  -fx-background-color: orange;
+  -fx-border-color: transparent;
+  -fx-border-style: none;
+  -fx-faint-focus-color: transparent; }
 
 .logo-container {
-  -fx-text-fill: #000000;
-  -fx-font-size: 16px; }
+  -fx-font-size: 16px;
+  -fx-background-color: #F5F5F5; }
+  .logo-container__inner {
+    -fx-padding: 30 15 50 15; }
 
 .menu-grid {
+  -fx-background-color: red;
   -fx-padding: 10px 15px; }
+
+.test {
+  -fx-background-color: orange; }
+
+.flow_pane_buttons {
+  -fx-background-color: #F5F5F5; }
+
+.blockButton_toogle__label {
+  -fx-font-size: 10px;
+  -fx-padding: 0px;
+  -fx-start-margin: 0px;
+  -fx-end-margin: 0px; }
+
+.blockButton_toogle {
+  -fx-padding: 2px; }
+
+.blockButton_toogle:selected .thumb-area {
+  -fx-padding: 10px 16px 10px 30px;
+  /* 7 16 7 16 */
+  -fx-background-color: #FFFFFF; }
+
+.blockButton_toogle .thumb-area {
+  -fx-padding: 10px 16px 10px 30px;
+  /* 7 16 7 16 */
+  -fx-border-radius: 1em;
+  -fx-background-color: #FF4C00;
+  -fx-border-color: #FFF;
+  -fx-border-style: solid; }
+
+.blockButton_toogle .thumb {
+  -fx-color: #FFF;
+  -fx-start-margin: 4px;
+  -fx-end-margin: 4px;
+  -fx-border-color: #FF4C00;
+  -fx-border-width: 2px;
+  -fx-background-insets: 0, 1,2;
+  -fx-border-style: solid;
+  -fx-border-radius: 1.0em;
+  /* large value to make sure this remains circular */
+  -fx-padding: 8px; }
+
+.blockButton_toogle:selected .thumb {
+  -fx-color: #FF4C00;
+  -fx-start-margin: 4px;
+  -fx-end-margin: 4px;
+  -fx-border-color: #FFF;
+  -fx-border-width: 2px;
+  -fx-background-insets: 0, 1, 2;
+  -fx-border-style: solid;
+  -fx-border-radius: 1.0em;
+  /* large value to make sure this remains circular */
+  -fx-padding: 8px; }

@@ -2,17 +2,17 @@ package com.example;
 
 import com.dustinredmond.fxtrayicon.FXTrayIcon;
 import com.example.controllers.MainScreenController;
+import com.example.controllers.MenuScreenController;
 import com.example.services.ScreenCreatorService;
 import com.example.services.ScreenLoaderService;
-import dorkbox.systemTray.SystemTray;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
-import java.awt.event.WindowEvent;
 import java.io.IOException;
 import java.util.Objects;
 
@@ -23,11 +23,15 @@ public class App extends Application {
     @Override
     public void start(Stage primaryStage) {
         try {
+            primaryStage.initStyle(StageStyle.UNDECORATED);
 
             Runtime.getRuntime().addShutdownHook(new Thread(ScreenCreatorService::stopScreenshotCreation));
 
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/screens/MainScreen.fxml"));
-            Parent root = loader.load();
+            FXMLLoader mainLoader = new FXMLLoader(getClass().getResource("/screens/MainScreen.fxml"));
+            FXMLLoader menuLoader = new FXMLLoader(getClass().getResource("/screens/MenuScreen.fxml"));
+            menuLoader.load();
+            Parent root = mainLoader.load();
+
 
             ScreenLoaderService mainContainer = new ScreenLoaderService(primaryStage);
 
@@ -42,20 +46,23 @@ public class App extends Application {
 
 
             primaryStage.setTitle("JavaFX App");
-            primaryStage.setScene(new Scene(root, 800, 600));
+            primaryStage.setScene(new Scene(root, 700, 500));
             primaryStage.setResizable(false);
 
 
 
             mainContainer.setScreen("main");
 
-            MainScreenController mainScreenController = loader.getController();
+            MainScreenController mainScreenController = mainLoader.getController();
             mainScreenController.setStage(primaryStage);
 
 
-
+            MenuScreenController controller = menuLoader.getController();
+            controller.setPrimaryStage(primaryStage);
 
             primaryStage.show();
+
+
         } catch (IOException e) {
             e.printStackTrace();
         }

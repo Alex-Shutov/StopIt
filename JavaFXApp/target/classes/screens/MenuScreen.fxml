@@ -18,71 +18,120 @@
 <?import javafx.scene.layout.HBox?>
 <?import org.controlsfx.control.ToggleSwitch?>
 <?import javafx.scene.layout.FlowPane?>
-<VBox xmlns="http://javafx.com/javafx"
-      xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.controllers.MenuScreenController"
-      stylesheets="/styles/css/aside.css">
 
-    <GridPane styleClass="menu-grid" hgap="10" vgap="10">
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Region?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.controllers.MenuScreenController"
+            stylesheets="/styles/css/aside.css" styleClass="menu-grid" fx:id="gridPane">
+        <padding>
+            <javafx.geometry.Insets  top="0" right="0" left="0" bottom="0"/>
+        </padding>
+<!--        <VBox ></VBox>-->
+<!--        <columnConstraints>-->
+<!--            <ColumnConstraints percentWidth="100.0" />-->
+<!--        </columnConstraints>-->
+<!--        <children>-->
         <!-- Логотип в верхнем левом углу aside блока -->
-        <VBox GridPane.columnIndex="0" GridPane.rowIndex="0" styleClass="logo-container" >
+        <VBox  styleClass="logo-container" >
 
-            <VBox spacing="10">
+            <VBox spacing="10" styleClass="logo-container__inner">
             <ImageView fitHeight="70" fitWidth="100" preserveRatio="true">
                 <!-- Поменяйте путь к вашему логотипу -->
                 <Image url="/images/logo.png"/>
             </ImageView>
             </VBox>
-            <FlowPane orientation="VERTICAL">
-            <VBox focusTraversable="true" fx:id="blockButton"   onMousePressed="#onVBoxPressed" styleClass="menu-button">
-                <HBox>
-                    <Label>Блокировка</Label>
-                    <ToggleSwitch fx:id="screenshotSwitch" />
+<!--            <BorderPane  fx:id="borderLeft">-->
+            <FlowPane fx:id="flowPane" styleClass="flow_pane_buttons" orientation="VERTICAL">
+                <HBox  fx:id="blockButton"    styleClass="menu-button, menu-button__block">
+                    <Label style="-fx-text-fill: #FFF">Блокировка</Label>
+                    <Region HBox.hgrow="ALWAYS"/>
+                    <Label style="-fx-text-fill: #FFF" styleClass="blockButton_toogle__label" fx:id="blockButtonToogleLabel" text="Откл."/>
+                    <ToggleSwitch styleClass="blockButton_toogle" alignment="TOP_RIGHT" fx:id="screenshotSwitch" />
                 </HBox>
-            </VBox>
-<!--            <VBox focusTraversable="true"   onMousePressed="#onVBoxPressed" onMouseClicked="#blurScreen" styleClass="menu-button">-->
-<!--                <HBox>-->
-<!--                    <Label>Кнопка 2</Label>-->
-<!--                </HBox>-->
-<!--            </VBox>-->
-<!--            <VBox focusTraversable="true"   onMousePressed="#onVBoxPressed"  styleClass="menu-button">-->
-<!--                <HBox>-->
-<!--                    <Label>Скриншоты</Label>-->
-<!--                    <ToggleSwitch />-->
-<!--                </HBox>-->
-<!--            </VBox>-->
+                <HBox  fx:id="profileButton"   onMousePressed="#onHBoxPressed" styleClass="menu-button">
+                    <HBox styleClass="menu-button, menu-button__inner">
+                        <Label >Профиль</Label>
+                        <Region HBox.hgrow="ALWAYS"/>
+                    </HBox>
+<!--                    <ToggleSwitch alignment="TOP_RIGHT" fx:id="screenshotSwitch" />-->
+                </HBox>
+                <HBox  fx:id="settingsButton"   onMousePressed="#onHBoxPressed" styleClass="menu-button">
+                    <HBox styleClass="menu-button, menu-button__inner">
+                        <Label >Настройки</Label>
+                        <Region HBox.hgrow="ALWAYS"/>
+                    </HBox>
+<!--                    <ToggleSwitch alignment="TOP_RIGHT" fx:id="screenshotSwitch" />-->
+                </HBox>
+                <HBox  fx:id="statsButton"   onMousePressed="#onHBoxPressed" styleClass="menu-button">
+                    <HBox styleClass="menu-button, menu-button__inner">
+                        <Label >Статистика</Label>
+                        <Region HBox.hgrow="ALWAYS"/>
+                    </HBox>
+<!--                    <ToggleSwitch alignment="TOP_RIGHT" fx:id="screenshotSwitch" />-->
+                </HBox>
+                <HBox  fx:id="premiumButton"   onMousePressed="#onHBoxPressed" styleClass="menu-button">
+                    <HBox styleClass="menu-button, menu-button__inner">
+                        <Label >Премиум</Label>
+                        <Region HBox.hgrow="ALWAYS"/>
+                    </HBox>
+<!--                    <ToggleSwitch alignment="TOP_RIGHT" fx:id="screenshotSwitch" />-->
+                </HBox>
+
+
+
+<!--&lt;!&ndash;            <VBox focusTraversable="true"   onMousePressed="#onVBoxPressed" onMouseClicked="#blurScreen" styleClass="menu-button">&ndash;&gt;-->
+<!--&lt;!&ndash;                <HBox>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <Label>Кнопка 2</Label>&ndash;&gt;-->
+<!--&lt;!&ndash;                </HBox>&ndash;&gt;-->
+<!--&lt;!&ndash;            </VBox>&ndash;&gt;-->
+<!--&lt;!&ndash;            <VBox focusTraversable="true"   onMousePressed="#onVBoxPressed"  styleClass="menu-button">&ndash;&gt;-->
+<!--&lt;!&ndash;                <HBox>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <Label>Скриншоты</Label>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <ToggleSwitch />&ndash;&gt;-->
+<!--&lt;!&ndash;                </HBox>&ndash;&gt;-->
+<!--&lt;!&ndash;            </VBox>&ndash;&gt;-->
             </FlowPane>
-<!--        <VBox spacing="10" GridPane.columnIndex="0" GridPane.rowIndex="3">-->
-<!--            <Button text="Button 1" onAction="#handleButton1" styleClass="button1"/>-->
-<!--            <Button text="Button 2" onAction="#handleButton2" styleClass="button2"/>-->
-<!--            <Button text="Button 3" onAction="#han dleButton3" styleClass="button3"/>-->
-<!--            <Button text="Button 4" onAction="#handleButton4" styleClass="button4"/>-->
-<!--            <Button text="Button 5" onAction="#handleButton5" styleClass="button5"/>-->
-<!--            <Button text="Button 6" onAction="#handleButton6" styleClass="button6"/>-->
+<!--            </BorderPane>-->
+<!--&lt;!&ndash;        <VBox spacing="10" GridPane.columnIndex="0" GridPane.rowIndex="3">&ndash;&gt;-->
+<!--&lt;!&ndash;            <Button text="Button 1" onAction="#handleButton1" styleClass="button1"/>&ndash;&gt;-->
+<!--&lt;!&ndash;            <Button text="Button 2" onAction="#handleButton2" styleClass="button2"/>&ndash;&gt;-->
+<!--&lt;!&ndash;            <Button text="Button 3" onAction="#han dleButton3" styleClass="button3"/>&ndash;&gt;-->
+<!--&lt;!&ndash;            <Button text="Button 4" onAction="#handleButton4" styleClass="button4"/>&ndash;&gt;-->
+<!--&lt;!&ndash;            <Button text="Button 5" onAction="#handleButton5" styleClass="button5"/>&ndash;&gt;-->
+<!--&lt;!&ndash;            <Button text="Button 6" onAction="#handleButton6" styleClass="button6"/>&ndash;&gt;-->
         </VBox>
 
-        <!-- Кнопка в верхнем правом углу aside блока -->
-<!--        <Button text="Кнопка" GridPane.columnIndex="1" GridPane.rowIndex="0"/>-->
+<!--        &lt;!&ndash; Кнопка в верхнем правом углу aside блока &ndash;&gt;-->
+<!--&lt;!&ndash;        <Button text="Кнопка" GridPane.columnIndex="1" GridPane.rowIndex="0"/>&ndash;&gt;-->
 
-        <!-- Основной контент в нижней части aside блока -->
-<!--        <GridPane GridPane.columnIndex="0" GridPane.rowIndex="1" GridPane.columnSpan="2">-->
-<!--            &lt;!&ndash; Вставьте сюда свои элементы &ndash;&gt;-->
-<!--            <Label text="Элемент 1" GridPane.columnIndex="0" GridPane.rowIndex="0"/>-->
-<!--            <Label text="Элемент 2" GridPane.columnIndex="1" GridPane.rowIndex="0"/>-->
-<!--            &lt;!&ndash; Добавьте еще элементов по вашему усмотрению &ndash;&gt;-->
-<!--        </GridPane>-->
+<!--        &lt;!&ndash; Основной контент в нижней части aside блока &ndash;&gt;-->
+<!--&lt;!&ndash;        <GridPane GridPane.columnIndex="0" GridPane.rowIndex="1" GridPane.columnSpan="2">&ndash;&gt;-->
+<!--&lt;!&ndash;            &lt;!&ndash; Вставьте сюда свои элементы &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;            <Label text="Элемент 1" GridPane.columnIndex="0" GridPane.rowIndex="0"/>&ndash;&gt;-->
+<!--&lt;!&ndash;            <Label text="Элемент 2" GridPane.columnIndex="1" GridPane.rowIndex="0"/>&ndash;&gt;-->
+<!--&lt;!&ndash;            &lt;!&ndash; Добавьте еще элементов по вашему усмотрению &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;        </GridPane>&ndash;&gt;-->
 
-    <!-- Остальной контент -->
-        <!-- Вставьте сюда свои элементы -->
-        <VBox spacing="10" GridPane.columnIndex="40" GridPane.rowIndex="1">
-<!--            <Label text="Дополнительный контент"/>-->
-        </VBox>
-        <VBox spacing="10" GridPane.columnIndex="4" GridPane.rowIndex="3">
-<!--            <Label text="Основной контент"/>-->
-        </VBox>
+<!--    &lt;!&ndash; Остальной контент &ndash;&gt;-->
+<!--        &lt;!&ndash; Вставьте сюда свои элементы &ndash;&gt;-->
+<!--        <VBox spacing="10" GridPane.columnIndex="40" GridPane.rowIndex="1">-->
+<!--&lt;!&ndash;            <Label text="Дополнительный контент"/>&ndash;&gt;-->
+<!--        </VBox>-->
+<!--        <VBox spacing="10" GridPane.columnIndex="4" GridPane.rowIndex="3">-->
+<!--&lt;!&ndash;            <Label text="Основной контент"/>&ndash;&gt;-->
+<!--        </VBox>-->
+<!--        </children>-->
+<!--    <VBox><Label text="123" style="-fx-background-color: green"/></VBox>-->
+<!--    <Button layoutX="777.0" layoutY="0.0" mnemonicParsing="false" onAction="#closeButtonAction" text="X" />-->
+
+    <!-- Добавляем кнопку сворачивания -->
+<!--    <Button layoutX="757.0" layoutY="0.0" mnemonicParsing="false" onAction="#minimizeButtonAction" text="_" />-->
+<!--        </children>-->
         <!-- Добавьте еще элементов по вашему усмотрению -->
-    </GridPane>
-</VBox>
+    </AnchorPane>
+
 <!--<VBox-->
 <!--        xmlns="http://javafx.com/javafx/17"-->
 <!--        xmlns:fx="http://javafx.com/fxml/1"-->
