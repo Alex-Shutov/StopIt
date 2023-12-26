@@ -18,11 +18,8 @@ public class MenuRightPaneList extends Pane {
     public MenuRightPaneList() {
         if (controller == null) {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/screens/components/MenuRightPaneList.fxml"));
-            System.out.println(1);
             controller = new MenuRightPaneController(App.RightPanelModel);
-            System.out.println(2);
             fxmlLoader.setController(controller);
-            System.out.println(3);
             try {
                 view = (Node) fxmlLoader.load();
                 controller.setPane(view);
@@ -31,7 +28,6 @@ public class MenuRightPaneList extends Pane {
             }
         }
         else {
-            System.out.println(controller.pane);
             view = controller.pane; // Возвратим view из ранее созданного контроллера
         }
 

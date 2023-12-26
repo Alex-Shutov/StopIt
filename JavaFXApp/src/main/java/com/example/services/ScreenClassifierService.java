@@ -55,7 +55,16 @@ public class ScreenClassifierService {
 
     }
 
+    public static void updateThreshold(double value){
+        System.out.println(value);
+        System.out.println(UNSAFE_CLASSIFICATION_THRESHOLD);
+        UNSAFE_CLASSIFICATION_THRESHOLD = value / 100.0;
+
+    }
+
     public static void KillActiveWindow(double classificationResult){
+        System.out.println(classificationResult);
+        System.out.println(UNSAFE_CLASSIFICATION_THRESHOLD);
         if (classificationResult > UNSAFE_CLASSIFICATION_THRESHOLD) {
             Platform.runLater(() -> {
                 new ActiveWindowInfo().closeActiveWindow();

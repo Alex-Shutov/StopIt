@@ -7,17 +7,39 @@
 <?import javafx.scene.layout.*?>
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-
-            translateX="50"
-
+            translateX="82"
+            stylesheets="/styles/css/rightPane.css"
             >
 <VBox focusTraversable="true"
-
-        fx:id="tabBox" style="-fx-background-color: black; -fx-min-width: 600px; -fx-min-height: 600px;"
+        fx:id="tabBox"
+        style="-fx-background-color: #FAFAFA; -fx-min-width: 600px; -fx-min-height: 600px;"
 >
-    <VBox fx:id="profilePane"><Label text="text123"/></VBox>
-    <VBox fx:id="settingsPane"><Label text="text1234"/></VBox>
+    <VBox fx:id="profilePane" styleClass="rightPane">
+        <Label text="Профиль"/>
+    </VBox>
+    <VBox fx:id="settingsPane" styleClass="rightPane">
+        <VBox><Label text="Настройки"/></VBox>
+        <FlowPane styleClass="rightPane_container">
+            <HBox styleClass="rightPane_container__card">
+                <VBox styleClass="rightPane_container__card_descr">
+                    <VBox styleClass="rightPane_container__card_descr__header"><Label text="Степень блокировки"/></VBox>
+                    <VBox styleClass="rightPane_container__card_descr__text"><Label text="Введите число от 0 до 100, где 0 - максимальная защита"/></VBox>
+                </VBox>
+                <Region HBox.hgrow="ALWAYS"></Region>
+                <TextField styleClass="rightPane_container__card_textInput" fx:id="settingsText" />
+            </HBox>
+<!--            <HBox styleClass="rightPane_container__card">-->
+<!--                <VBox styleClass="rightPane_container__card_descr">-->
+<!--                    <VBox styleClass="rightPane_container__card_descr__header"><Label text="Степень блокировки"/></VBox>-->
+<!--                    <VBox styleClass="rightPane_container__card_descr__text"><Label text="Введите число от 0 до 100, где 100 - максимальная защита"/></VBox>-->
+<!--                </VBox>-->
+<!--                <Region HBox.hgrow="ALWAYS"></Region>-->
+<!--                <TextField styleClass="rightPane_container__card_textInput" />-->
+<!--            </HBox>-->
+        </FlowPane>
+
+    </VBox>
 <!--    <VBox><Label text="text12345"/></VBox>-->
-    <Region VBox.vgrow="ALWAYS"></Region>
+<!--    <Region VBox.vgrow="ALWAYS"></Region>-->
     </VBox>
 </AnchorPane>
