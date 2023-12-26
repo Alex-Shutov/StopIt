@@ -4,11 +4,14 @@ C:\Alex\dev\stop_it\JavaFXApp\src\main\java\com\example\services\ScreenClassifie
 C:\Alex\dev\stop_it\JavaFXApp\src\main\java\com\example\utils\ActiveWindowInfo.java
 C:\Alex\dev\stop_it\JavaFXApp\src\main\java\com\example\interfaces\IControlledScreen.java
 C:\Alex\dev\stop_it\JavaFXApp\src\main\java\com\example\controllers\MainScreenController.java
+C:\Alex\dev\stop_it\JavaFXApp\src\main\java\com\example\components\MenuRightPaneList.java
 C:\Alex\dev\stop_it\JavaFXApp\src\main\java\com\example\services\ScreenLoaderService.java
 C:\Alex\dev\stop_it\JavaFXApp\src\main\java\com\example\interfaces\IModalController.java
 C:\Alex\dev\stop_it\JavaFXApp\src\main\java\com\example\services\ScreenOverlayService.java
 C:\Alex\dev\stop_it\JavaFXApp\src\main\java\com\example\services\ScreenCreatorService.java
 C:\Alex\dev\stop_it\JavaFXApp\src\main\java\com\example\controllers\MenuScreenController.java
 C:\Alex\dev\stop_it\JavaFXApp\src\main\java\com\example\models\browsers\FirefoxBrowser.java
+C:\Alex\dev\stop_it\JavaFXApp\src\main\java\com\example\controllers\MenuRightPaneController.java
+C:\Alex\dev\stop_it\JavaFXApp\src\main\java\com\example\models\shared\RightPanelModel.java
 C:\Alex\dev\stop_it\JavaFXApp\src\main\java\com\example\models\browsers\ChromiumBrowser.java
 C:\Alex\dev\stop_it\JavaFXApp\src\main\java\com\example\App.java

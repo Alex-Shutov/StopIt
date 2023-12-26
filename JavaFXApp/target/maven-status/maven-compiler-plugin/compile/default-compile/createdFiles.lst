@@ -1,14 +1,17 @@
 com\example\services\ScreenClassifierService.class
 com\example\services\ScreenCreatorService.class
 com\example\services\ScreenLoaderService.class
+com\example\controllers\MenuRightPaneController.class
 com\example\interfaces\IBrowser.class
 com\example\App.class
 com\example\controllers\MenuScreenController.class
 com\example\interfaces\IControlledScreen.class
+com\example\models\shared\RightPanelModel.class
 com\example\controllers\MainModalController.class
 com\example\utils\ActiveWindowInfo.class
 com\example\controllers\MainScreenController.class
 com\example\services\ScreenOverlayService.class
 com\example\models\browsers\ChromiumBrowser.class
 com\example\interfaces\IModalController.class
+com\example\components\MenuRightPaneList.class
 com\example\models\browsers\FirefoxBrowser.class

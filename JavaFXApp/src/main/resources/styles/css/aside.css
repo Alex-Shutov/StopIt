@@ -28,6 +28,10 @@
     -fx-padding: 30 15 50 15; }
 
 .menu-grid {
+  -fx-min-width: 200px;
+  -fx-min-height: 600px;
+  -fx-max-width: 200px;
+  -fx-max-height: 600px;
   -fx-background-color: red;
   -fx-padding: 10px 15px; }
 
@@ -38,7 +42,7 @@
   -fx-background-color: #F5F5F5; }
 
 .blockButton_toogle__label {
-  -fx-font-size: 12px;
+  -fx-font-size: 10px;
   -fx-padding: 0px;
   -fx-start-margin: 0px;
   -fx-end-margin: 0px; }

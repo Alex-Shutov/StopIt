@@ -28,6 +28,10 @@
     -fx-padding: 30 15 50 15; }
 
 .menu-grid {
+  -fx-min-width: 200px;
+  -fx-min-height: 600px;
+  -fx-max-width: 200px;
+  -fx-max-height: 600px;
   -fx-background-color: red;
   -fx-padding: 10px 15px; }
 

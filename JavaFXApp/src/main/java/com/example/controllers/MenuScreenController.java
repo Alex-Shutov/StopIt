@@ -1,13 +1,17 @@
 package com.example.controllers;
 
+import com.example.App;
 import com.example.interfaces.IControlledScreen;
+import com.example.models.shared.RightPanelModel;
 import com.example.services.ScreenCreatorService;
 import com.example.services.ScreenLoaderService;
 import com.example.services.ScreenOverlayService;
 import javafx.application.Platform;
+import javafx.beans.property.StringProperty;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
@@ -16,15 +20,8 @@ import javafx.stage.Stage;
 import org.controlsfx.control.GridView;
 
 import java.awt.*;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.net.URL;
-import java.util.Objects;
 
 import org.controlsfx.control.ToggleSwitch;
-
-import javax.imageio.ImageIO;
-import javax.swing.text.html.ImageView;
 //import com.sun.jna.platform.win32.WinUser.HW;
 //import com.sun.jna.platform.win32.WinUser.HWND_BOTTOM;
 
@@ -36,16 +33,10 @@ public class MenuScreenController implements IControlledScreen {
     public HBox statsButton;
     public HBox premiumButton;
     public javafx.scene.control.Label blockButtonToogleLabel;
+    public StackPane stackPane;
     private ScreenOverlayService screenOverlay = new ScreenOverlayService();
-    //private ScreenCreatorService screenCreator = new ScreenCreatorService();
-    @FXML
-    private GridView<Label> gridView; // Замените String на тип вашего элемента
 
     @FXML
-    private GridView<Label> mainContentView;
-
-    @FXML
-    private VBox menuVBox;
 
     private Node activeButton;
 
@@ -55,28 +46,12 @@ public class MenuScreenController implements IControlledScreen {
     @FXML
     private FlowPane flowPane;
 
-    @FXML
-    private BorderPane borderLeft;
 
     @FXML
     private AnchorPane gridPane;
-    @FXML
-    private VBox test;
 
-    @FXML
-    private Button button2;
 
-    @FXML
-    private Button button3;
-
-    @FXML
-    private Button button4;
-
-    @FXML
-    private Button button5;
-
-    @FXML
-    private Button button6;
+    private final RightPanelModel rightPanelModel = App.RightPanelModel;
 
     @FXML
     private ToggleSwitch screenshotSwitch;
@@ -126,13 +101,6 @@ public class MenuScreenController implements IControlledScreen {
 
     }
 
-    @FXML
-    private void handleButton6(ActionEvent event) {
-        // TODO: Add logic for button 6
-        resetButtons();
-        button6.setStyle("-fx-background-color: orange;");
-    }
-
     private void resetButtons() {
 //        menuVBox.getChildren().forEach(node -> {
 //            if (node instanceof Button) {
@@ -142,12 +110,17 @@ public class MenuScreenController implements IControlledScreen {
     }
 
     public void initialize() {
+
+
 //        blockButton.requestFocus();
 //        screenOverlay = new ScreenOverlayService();
 ////        menuVBox.setPadding(new Insets(0));
 ////        menuVBox.setSpacing(0);
-        gridPane.toFront();
+//        gridPane.toFront();
 //        gridPane.set
+//        gridPane.setMaxHeight(gridPane.getHeight());
+//        gridPane.setMaxWidth(300);
+        stackPane.setAlignment(Pos.CENTER_LEFT);
 
         blockButton.setPickOnBounds(false);
 //        blockButton.setBorder(null);
@@ -199,6 +172,16 @@ public class MenuScreenController implements IControlledScreen {
 
     // Обработчик нажатия
     public void onHBoxPressed(MouseEvent event) {
+        Platform.runLater(()-> {
+            if (event.getSource() != activeButton) {
+                _stylingHBoxButton(event);
+                _activateRightPane(((HBox) event.getSource()).idProperty());
+            }
+        });
+    }
+
+    private void _stylingHBoxButton(MouseEvent event){
+
         if(activeButton!=null){
             activeButton.setStyle("-fx-padding: 10px 10px 10px 12px;");
             HBox hBoxactive = (HBox) activeButton;
@@ -218,6 +201,13 @@ public class MenuScreenController implements IControlledScreen {
 //        hbox.setStyle("-fx-background-color: #FF4C00;");
 
         activeButton = hbox;
+
+    }
+
+    private void _activateRightPane(StringProperty id){
+        String currentPane = id.toString().toLowerCase().replace("button","");
+        rightPanelModel.setData(currentPane);
+
     }
 
     public void blurScreen() {

@@ -3,6 +3,7 @@ package com.example;
 import com.dustinredmond.fxtrayicon.FXTrayIcon;
 import com.example.controllers.MainScreenController;
 import com.example.controllers.MenuScreenController;
+import com.example.models.shared.RightPanelModel;
 import com.example.services.ScreenCreatorService;
 import com.example.services.ScreenLoaderService;
 import javafx.application.Application;
@@ -19,6 +20,7 @@ import java.util.Objects;
 
 public class App extends Application {
 
+    public static RightPanelModel RightPanelModel = new RightPanelModel();
 
     @Override
     public void start(Stage primaryStage) {

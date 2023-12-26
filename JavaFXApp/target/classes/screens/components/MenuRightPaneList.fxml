@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+
+            translateX="50"
+
+            >
+<VBox focusTraversable="true"
+
+        fx:id="tabBox" style="-fx-background-color: black; -fx-min-width: 600px; -fx-min-height: 600px;"
+>
+    <VBox fx:id="profilePane"><Label text="text123"/></VBox>
+    <VBox fx:id="settingsPane"><Label text="text1234"/></VBox>
+<!--    <VBox><Label text="text12345"/></VBox>-->
+    <Region VBox.vgrow="ALWAYS"></Region>
+    </VBox>
+</AnchorPane>

@@ -21,9 +21,20 @@
 
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Region?>
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.controllers.MenuScreenController"
+
+<?import com.example.components.MenuRightPaneList?>
+<?import javafx.scene.layout.StackPane?>
+<HBox
+        xmlns="http://javafx.com/javafx"
+
+        xmlns:fx="http://javafx.com/fxml"
+        fx:controller="com.example.controllers.MenuScreenController"
+>
+    <StackPane
+            fx:id="stackPane">
+        <MenuRightPaneList/>
+<AnchorPane
+
             stylesheets="/styles/css/aside.css" styleClass="menu-grid" fx:id="gridPane">
         <padding>
             <javafx.geometry.Insets  top="0" right="0" left="0" bottom="0"/>
@@ -124,13 +135,19 @@
 <!--        </VBox>-->
 <!--        </children>-->
 <!--    <VBox><Label text="123" style="-fx-background-color: green"/></VBox>-->
-<!--    <Button layoutX="777.0" layoutY="0.0" mnemonicParsing="false" onAction="#closeButtonAction" text="X" />-->
+    <Button layoutX="777.0" layoutY="0.0" mnemonicParsing="false" onAction="#closeButtonAction" text="X" />
 
+
+<!--    <children>-->
+<!--    </children>-->
     <!-- Добавляем кнопку сворачивания -->
 <!--    <Button layoutX="757.0" layoutY="0.0" mnemonicParsing="false" onAction="#minimizeButtonAction" text="_" />-->
 <!--        </children>-->
         <!-- Добавьте еще элементов по вашему усмотрению -->
     </AnchorPane>
+
+    </StackPane>
+</HBox>
 
 <!--<VBox-->
 <!--        xmlns="http://javafx.com/javafx/17"-->
