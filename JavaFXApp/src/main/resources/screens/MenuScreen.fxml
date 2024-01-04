@@ -68,27 +68,27 @@
                     </HBox>
 <!--                    <ToggleSwitch alignment="TOP_RIGHT" fx:id="screenshotSwitch" />-->
                 </HBox>
-                <HBox  fx:id="profileButton"   onMousePressed="#onHBoxPressed" styleClass="menu-button">
-                    <HBox styleClass="menu-button, menu-button__inner">
-                        <Label >Профиль</Label>
-                        <Region HBox.hgrow="ALWAYS"/>
-                    </HBox>
-                    <!--                    <ToggleSwitch alignment="TOP_RIGHT" fx:id="screenshotSwitch" />-->
-                </HBox>
-                <HBox  fx:id="statsButton"   onMousePressed="#onHBoxPressed" styleClass="menu-button">
-                    <HBox styleClass="menu-button, menu-button__inner">
-                        <Label >Статистика</Label>
-                        <Region HBox.hgrow="ALWAYS"/>
-                    </HBox>
-<!--                    <ToggleSwitch alignment="TOP_RIGHT" fx:id="screenshotSwitch" />-->
-                </HBox>
-                <HBox  fx:id="premiumButton"   onMousePressed="#onHBoxPressed" styleClass="menu-button">
-                    <HBox styleClass="menu-button, menu-button__inner">
-                        <Label >Премиум</Label>
-                        <Region HBox.hgrow="ALWAYS"/>
-                    </HBox>
-<!--                    <ToggleSwitch alignment="TOP_RIGHT" fx:id="screenshotSwitch" />-->
-                </HBox>
+<!--                <HBox  fx:id="profileButton"   onMousePressed="#onHBoxPressed" styleClass="menu-button">-->
+<!--                    <HBox styleClass="menu-button, menu-button__inner">-->
+<!--                        <Label >Профиль</Label>-->
+<!--                        <Region HBox.hgrow="ALWAYS"/>-->
+<!--                    </HBox>-->
+<!--                    &lt;!&ndash;                    <ToggleSwitch alignment="TOP_RIGHT" fx:id="screenshotSwitch" />&ndash;&gt;-->
+<!--                </HBox>-->
+<!--                <HBox  fx:id="statsButton"   onMousePressed="#onHBoxPressed" styleClass="menu-button">-->
+<!--                    <HBox styleClass="menu-button, menu-button__inner">-->
+<!--                        <Label >Статистика</Label>-->
+<!--                        <Region HBox.hgrow="ALWAYS"/>-->
+<!--                    </HBox>-->
+<!--&lt;!&ndash;                    <ToggleSwitch alignment="TOP_RIGHT" fx:id="screenshotSwitch" />&ndash;&gt;-->
+<!--                </HBox>-->
+<!--                <HBox  fx:id="premiumButton"   onMousePressed="#onHBoxPressed" styleClass="menu-button">-->
+<!--                    <HBox styleClass="menu-button, menu-button__inner">-->
+<!--                        <Label >Премиум</Label>-->
+<!--                        <Region HBox.hgrow="ALWAYS"/>-->
+<!--                    </HBox>-->
+<!--&lt;!&ndash;                    <ToggleSwitch alignment="TOP_RIGHT" fx:id="screenshotSwitch" />&ndash;&gt;-->
+<!--                </HBox>-->
 
 
 
